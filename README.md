@@ -1,3 +1,5 @@
+Lectura.py  es el archivo para encontara el archivo .
+
 archivo = open("productos.txt", "a")
 print("*****Tienda de productos****")
 while True:
@@ -9,6 +11,10 @@ while True:
     archivo.write("\n" + nombre + "\t" + str(precio) + "\t" + str(stock))
    
    
+
+
+Lectura.py genera carpeta de blok de nota 
+
 
 print("\n******Lista de Productos******")
 archivo = open("productos.txt", "r")
