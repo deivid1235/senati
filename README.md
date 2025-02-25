@@ -13,3 +13,17 @@ while True:
 print("\n******Lista de Productos******")
 archivo = open("productos.txt", "r")
 print(archivo.read())
+
+
+archivo = open("Datos.txt", "r")
+
+
+contenido = archivo.read()
+print("Contenido del archivo")
+print(contenido)
+
+
+
+archivo.close()
+
+
