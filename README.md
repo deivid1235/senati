@@ -72,3 +72,11 @@ while True:
 archivo.close()
 
 
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/29b2a62a-eca9-49f3-b30b-88da3db8777d)
+
+
