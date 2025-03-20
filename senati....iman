@@ -1,2 +1,101 @@
 
 "C:\Users\Desarrollo\Pictures\Screenshots\Captura de pantalla 2025-03-11 085203.png"
+
+
+
+
+
+ejemplo 6 :
+
+
+package ejercicio6;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class FrmNroInvertido extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField txtMensaje;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FrmNroInvertido frame = new FrmNroInvertido();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public FrmNroInvertido() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 202);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Numero invertido");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel.setBounds(142, 11, 145, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNumero = new JLabel("Numero: ");
+		lblNumero.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNumero.setBounds(20, 54, 59, 14);
+		contentPane.add(lblNumero);
+		
+		txtMensaje = new JTextField();
+		txtMensaje.setBounds(89, 51, 122, 20);
+		contentPane.add(txtMensaje);
+		txtMensaje.setColumns(10);
+		
+
+		JLabel lblMensaje = new JLabel("");
+		lblMensaje.setBounds(46, 109, 216, 20);
+		contentPane.add(lblMensaje);
+		
+		JButton btnProcesador = new JButton("Invertir");
+		btnProcesador.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 String numeroStr = txtMensaje.getText();
+	                
+	                
+	                if (numeroStr.matches("\\d+")) {
+	                  
+	                    String numeroInvertido = new StringBuilder(numeroStr).reverse().toString();
+	                    lblMensaje.setText("Número invertido: " + numeroInvertido);
+	                } else {
+	                    lblMensaje.setText("Por favor ingrese un número válido.");
+	                }				
+			}
+		});
+		btnProcesador.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnProcesador.setBounds(283, 50, 97, 23);
+		contentPane.add(btnProcesador);
+		
+	
+	}
+}
+
